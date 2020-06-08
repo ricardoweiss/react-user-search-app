@@ -15,6 +15,7 @@ const User = () => {
             })
             .catch(error => setError(true));
     }, [username])
+    console.log(error)
     return (
 
         error ? <h1>User not Found</h1> : (<h1>{info.login}</h1>)
