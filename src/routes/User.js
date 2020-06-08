@@ -35,20 +35,23 @@ const User = () => {
         return (
 
             <section className="user-profile">
+                <div className="user-profile__repositories">
+                    <h1 className="repositories__header">User repositories:</h1>
+                    {repo.sort((a, b) => (a.stargazers_count > b.stargazers_count) ? -1 : 1).map((repositorio) => {
+                        return (<div className="repositories__repository">
+                            <p>{repositorio.name}  |  {repositorio.stargazers_count} estrelas</p>
+                            <p></p>
+
+                        </div>)
+                    })}
+                </div>
                 <img className="user-profile__image" src={info.avatar_url} alt=""/>
                 <h1 className="user-profile__name">{info.name}</h1>
                 <p className="user-profile__description">{info.bio}</p>
                 <p className="user-profile__email">email: {info.email ? info.email : 'no email'}</p>
                 <p className="user-profile__followers">{info.followers} Followers</p>
                 <p className="user-profile__following">{info.following} Following</p>
-                <div className="user-profile__repositories">
-                    <h1 className="repositories__header">User repositories:</h1>
-                    {repo.map((repositorio) => {
-                        return (<div className="repositories__repository">
-                            {repositorio.name}
-                        </div>)
-                    })}
-                </div>
+
             </section>);
     }
 

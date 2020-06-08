@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useHistory, Link } from "react-router-dom";
 
+import "./css/Navbar.css"
+
 const NavBar = () => {
 
     const [input, setInput] = useState('')

@@ -1,17 +1,2 @@
 
 
-.navbar {
-  display: flex;
-  padding: 1rem;
-  background: grey;
-  align-items: center;
-}
-
-
-
-.input {
-  display: flex;
-  height: 100%;
-  align-items: center;
-  justify-content: center;
-}
