@@ -1,3 +1,27 @@
+@mixin tablet {
+  @media (min-width: 48rem) {
+    @content
+  }
+}
+
+
+@mixin desktop {
+  @media (min-width: 40rem) {
+    @content
+  }
+}
+
+.repositories {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @include tablet {
+    display: flex;
+    grid-area: repo;
+  }
+
+}
 
 .repositories__header {
   margin-top: 4rem;
@@ -15,5 +39,7 @@
   background: rgba(255, 255, 255, 0.3);
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
   margin: 2rem 0;
+  @include desktop {
 
+  }
 }

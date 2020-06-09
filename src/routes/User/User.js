@@ -35,53 +35,35 @@ const User = () => {
         return (<h1>User not Found</h1>);
     } else {
         return (
-
+<React.Fragment>
             <section className="user-profile">
-                <img className="user-profile__image" src={info.avatar_url} alt=""/>
-                <div className="user-profile__info-container">
-                    <p className="user-profile__info"><span className="title--whitebold">Name:</span> <br/>{info.name}</p>
-                    <p className="user-profile__info"><span className="title--whitebold">Bio:</span><br/> {info.bio ? info.bio : 'no bio'} </p>
-                    <p className="user-profile__info"><span className="title--whitebold">Email:</span><br/> {info.email ? info.email : 'no email'}</p>
+                <div className="user-profile__container">
+                    <img className="user-profile__image" src={info.avatar_url} alt=""/>
+                    <div className="user-profile__info-container">
+                        <p className="user-profile__info"><span className="title--whitebold">Name:</span> <br/>{info.name}</p>
+                        <p className="user-profile__info"><span className="title--whitebold">Bio:</span><br/> {info.bio ? info.bio : 'no bio'} </p>
+                        <p className="user-profile__info"><span className="title--whitebold">Email:</span><br/> {info.email ? info.email : 'no email'}</p>
+                    </div>
+                    <div className="user-profile__follows-container">
+                        <img className="follows__image" src={require('../../images/follow.png')} alt=""/>
+                        <p className="user-profile__followers">{info.followers} Followers</p>
+                    </div>
+                    <div className="user-profile__follows-container">
+                        <img className="follows__image" src={require('../../images/followers.png')} alt=""/>
+                        <p className="user-profile__followers">{info.following} Following</p>
+                    </div>
                 </div>
-                <div className="user-profile__follows-container">
-                    <img className="follows__image" src={require('../../images/follow.png')} alt=""/>
-                    <p className="user-profile__followers">{info.followers} Followers</p>
+                <div className="repositories">
+                    <h1 className="repositories__header">User repositories:</h1>
+                    <p className="repositories__header-caption">( Click in the repository name to open it on a new window!)</p>
+                    <div className="repositories__container">
+                        <Repositories repo={repo}/>
+                    </div>
                 </div>
-                <div className="user-profile__follows-container">
-                    <img className="follows__image" src={require('../../images/followers.png')} alt=""/>
-                    <p className="user-profile__followers">{info.following} Following</p>
-                </div>
-                <h1 className="repositories__header">User repositories:</h1>
-                <p className="repositories__header-caption">( Click in the repository name to open it on a new window!)</p>
-                <div className="repositories__container">
-                    <Repositories repo={repo}/>
-                </div>
-
-
-
-
-
-            </section>);
+            </section>
+</React.Fragment>
+            );
     }
-
-
-        /*
-        error ? <h1>User not Found</h1> :
-            (/!*<h1>{info.bio}</h1>*!/
-            <section className="user-profile">
-                <img className="user-profile__image" src={info.avatar_url} alt=""/>
-                <h1 className="user-profile__name">{info.name}</h1>
-                <p className="user-profile__description">{info.bio}</p>
-                <p className="user-profile__email">email: {info.email ? info.email : 'no email'}</p>
-                <p className="user-profile__followers">{info.followers} Followers</p>
-                <p className="user-profile__following">{info.following} Following</p>
-                <div className="user-profile__repositories">
-                    {repo.map((repositorio) => {
-                        return repositorio.name
-                    })}
-                </div>
-            </section>)*/
-
 }
 
 export default User;
