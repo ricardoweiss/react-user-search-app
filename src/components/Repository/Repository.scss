@@ -1,0 +1,28 @@
+
+.repositories__repository {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  a {
+    color: black;
+    text-decoration: none;
+  }
+}
+
+.repository__name {
+  margin-left: 1rem;
+}
+
+
+
+.repository__star-count {
+  font-weight: 300;
+  font-size: 0.8rem;
+  margin: 0 1rem 0 0;
+}
+
+.repository__star {
+  width: 1rem;
+  opacity: 0.8;
+  vertical-align: middle;
+}

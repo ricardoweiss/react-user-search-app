@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './css/App.css'
 import {
     BrowserRouter as Router,
@@ -10,10 +10,10 @@ import {
 
 
 import Home from
-        "./routes/Home"
+        "./routes/Home/Home"
 import User from
-        "./routes/User"
-import NavBar from "./Navbar";
+        "./routes/User/User"
+import NavBar from "./components/Navbar/Navbar";
 
 function App() {
 

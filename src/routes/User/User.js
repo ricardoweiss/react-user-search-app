@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import { useParams } from 'react-router-dom';
-import Repositories from "../Repositories";
-import "../css/User.css"
+import Repositories from "../../components/Repositories/Repositories";
+import "./User.css"
 const User = () => {
 
     let { username } = useParams();
@@ -40,15 +40,15 @@ const User = () => {
                 <img className="user-profile__image" src={info.avatar_url} alt=""/>
                 <div className="user-profile__info-container">
                     <p className="user-profile__info"><span className="title--whitebold">Name:</span> <br/>{info.name}</p>
-                    <p className="user-profile__info"><span className="title--whitebold">Bio:</span><br/> {info.bio ? info.bio : 'No bio'} </p>
+                    <p className="user-profile__info"><span className="title--whitebold">Bio:</span><br/> {info.bio ? info.bio : 'no bio'} </p>
                     <p className="user-profile__info"><span className="title--whitebold">Email:</span><br/> {info.email ? info.email : 'no email'}</p>
                 </div>
                 <div className="user-profile__follows-container">
-                    <img className="follows__image" src={require('../images/follow.png')} alt=""/>
+                    <img className="follows__image" src={require('../../images/follow.png')} alt=""/>
                     <p className="user-profile__followers">{info.followers} Followers</p>
                 </div>
                 <div className="user-profile__follows-container">
-                    <img className="follows__image" src={require('../images/followers.png')} alt=""/>
+                    <img className="follows__image" src={require('../../images/followers.png')} alt=""/>
                     <p className="user-profile__followers">{info.following} Following</p>
                 </div>
                 <h1 className="repositories__header">User repositories:</h1>

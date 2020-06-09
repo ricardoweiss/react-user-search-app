@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useHistory, Link } from "react-router-dom";
 
-import "./css/Navbar.css"
+import "./Navbar.css"
 
 const NavBar = () => {
 
@@ -23,7 +23,7 @@ const NavBar = () => {
     return (
         <header className="navbar">
             <Link className="navbar__logo-link" to="/">
-                <img className="navbar__logo" src={require('./images/logo.png')} alt="logo"/>
+                <img className="navbar__logo" src={require('../../images/logo.png')} alt="logo"/>
             </Link>
             <div className="input">
 

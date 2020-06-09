@@ -1,5 +1,5 @@
 import React from "react";
-import Repository from "./Repository";
+import Repository from "../Repository/Repository";
 const Repositories =(props) => {
     return (
         <div className="user-profile__repositories">
