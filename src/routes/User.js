@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import { useParams } from 'react-router-dom';
+import "../css/User.css"
 const User = () => {
 
     let { username } = useParams();
@@ -35,22 +36,36 @@ const User = () => {
         return (
 
             <section className="user-profile">
-                <div className="user-profile__repositories">
-                    <h1 className="repositories__header">User repositories:</h1>
-                    {repo.sort((a, b) => (a.stargazers_count > b.stargazers_count) ? -1 : 1).map((repositorio) => {
-                        return (<div className="repositories__repository">
-                            <p>{repositorio.name}  |  {repositorio.stargazers_count} estrelas</p>
-                            <p></p>
-
-                        </div>)
-                    })}
-                </div>
                 <img className="user-profile__image" src={info.avatar_url} alt=""/>
-                <h1 className="user-profile__name">{info.name}</h1>
-                <p className="user-profile__description">{info.bio}</p>
-                <p className="user-profile__email">email: {info.email ? info.email : 'no email'}</p>
-                <p className="user-profile__followers">{info.followers} Followers</p>
-                <p className="user-profile__following">{info.following} Following</p>
+                <div className="user-profile__info-container">
+                    <p className="user-profile__info"><span className="title--whitebold">Name:</span> <br/>{info.name}</p>
+                    <p className="user-profile__info"><span className="title--whitebold">Bio:</span><br/> {info.bio ? info.bio : 'No bio'} </p>
+                    <p className="user-profile__info"><span className="title--whitebold">Email:</span><br/> {info.email ? info.email : 'no email'}</p>
+                </div>
+                <div className="user-profile__follows-container">
+                    <img className="follows__image" src={require('../images/follow.png')} alt=""/>
+                    <p className="user-profile__followers">{info.followers} Followers</p>
+                </div>
+                <div className="user-profile__follows-container">
+                    <img className="follows__image" src={require('../images/followers.png')} alt=""/>
+                    <p className="user-profile__followers">{info.following} Following</p>
+                </div>
+                <h1 className="repositories__header">User repositories:</h1>
+                <div className="repositories-container">
+                    <div className="user-profile__repositories">
+                        {repo.sort((a, b) => (a.stargazers_count > b.stargazers_count) ? -1 : 1).map((repositorio) => {
+                            return (<div className="repositories__repository">
+                                <p>{repositorio.name}  |  {repositorio.stargazers_count} estrelas</p>
+
+
+                            </div>)
+                        })}
+                    </div>
+                </div>
+
+
+
+
 
             </section>);
     }
