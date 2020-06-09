@@ -22,7 +22,7 @@ const NavBar = () => {
 
     return (
         <header className="navbar">
-            <Link className="navbar__link" to="/">
+            <Link className="navbar__logo-link" to="/">
                 <img className="navbar__logo" src={require('./images/logo.png')} alt="logo"/>
             </Link>
             <div className="input">
@@ -32,9 +32,9 @@ const NavBar = () => {
 
 
             </div>
-            {/*<Link className="navbar__link" to="/">
+            <Link className="navbar__title-link" to="/">
                 <h1 className="navbar__title">Github Search Users</h1>
-            </Link>*/}
+            </Link>
 
 
 

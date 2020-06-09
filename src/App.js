@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './App.css';
+import './css/App.css'
 import {
     BrowserRouter as Router,
     Switch,
@@ -23,19 +23,13 @@ function App() {
             <div className="App">
                 <NavBar />
                 <main>
-
-                    <div>
-                        <Switch>
-                            <Route exact path="/" component={Home}/>
-                            <Route exact path="/user/:username" component={User}/>
-                        </Switch>
-                    </div>
+                    <Switch>
+                        <Route exact path="/" component={Home}/>
+                        <Route exact path="/user/:username" component={User}/>
+                    </Switch>
                 </main>
             </div>
-
-
         </Router>
-
     );
 }
 
