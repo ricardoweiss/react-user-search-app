@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import { useParams } from 'react-router-dom';
+import Repositories from "../Repositories";
 import "../css/User.css"
 const User = () => {
 
@@ -51,16 +52,8 @@ const User = () => {
                     <p className="user-profile__followers">{info.following} Following</p>
                 </div>
                 <h1 className="repositories__header">User repositories:</h1>
-                <div className="repositories-container">
-                    <div className="user-profile__repositories">
-                        {repo.sort((a, b) => (a.stargazers_count > b.stargazers_count) ? -1 : 1).map((repositorio) => {
-                            return (<div className="repositories__repository">
-                                <p>{repositorio.name}  |  {repositorio.stargazers_count} estrelas</p>
-
-
-                            </div>)
-                        })}
-                    </div>
+                <div className="repositories__container">
+                    <Repositories repo={repo}/>
                 </div>
 
 
