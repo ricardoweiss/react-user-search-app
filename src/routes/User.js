@@ -52,6 +52,7 @@ const User = () => {
                     <p className="user-profile__followers">{info.following} Following</p>
                 </div>
                 <h1 className="repositories__header">User repositories:</h1>
+                <p className="repositories__header-caption">( Click in the repository name to open it on a new window!)</p>
                 <div className="repositories__container">
                     <Repositories repo={repo}/>
                 </div>
