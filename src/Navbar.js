@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useHistory, Link } from "react-router-dom";
 
 import "./css/Navbar.css"
@@ -22,18 +22,20 @@ const NavBar = () => {
 
     return (
         <header className="navbar">
-            <div className="input">
-                <input type="text" onChange={handleInput}/>
-                <button onClick={handleClick}>Search</button>
-
-
-            </div>
             <Link className="navbar__link" to="/">
-                <h1 className="navbar__title">Github Search Users</h1>
+                <img className="navbar__logo" src={require('./images/logo.png')} alt="logo"/>
             </Link>
-            <div className="navbar__image-container">
-                <img className="navbar__logo" src="./images/logo.png" alt=""/>
+            <div className="input">
+
+                <input type="text" placeholder="Username" onChange={handleInput}/>
+                <button className="input__button" onClick={handleClick}>Search</button>
+
+
             </div>
+            {/*<Link className="navbar__link" to="/">
+                <h1 className="navbar__title">Github Search Users</h1>
+            </Link>*/}
+
 
 
 
