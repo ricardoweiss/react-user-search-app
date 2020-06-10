@@ -80,6 +80,7 @@
   align-self: center;
   margin: 0 0.8rem;
   color: map_get($colors, blue);
+  transition: background-color 500ms;
   &:hover,
   &:active {
     background: map_get($colors, blue);
