@@ -34,7 +34,10 @@
 
 .navbar__logo {
   height: 3rem;
-  margin-left: 0.5rem;
+  @include tablet {
+    margin-left: 0.5rem;
+  }
+
 }
 
 .navbar__title-link {
