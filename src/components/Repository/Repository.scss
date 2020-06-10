@@ -14,6 +14,7 @@
   a {
     color: map_get($colors, black);
     text-decoration: none;
+    width: 65%;
   }
   @include desktop {
     width: 50%;
@@ -22,9 +23,10 @@
 
 .repository__name {
   margin-left: 1rem;
+  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-//TODO  /*width: 12rem;*/
+  width: 100%;
   &:hover,
   &:active {
     color: #535353;

@@ -24,56 +24,13 @@
     display: grid;
     height: 100%;
     grid-template-rows: 1fr;
-    grid-template-columns: 1.6fr 1fr;
+    grid-template-columns: 1.2fr 1fr;
     grid-template-areas:
             'repo info';
    /* align-items: center;*/
   }
 }
 
-.user-profile__container {
-  display: flex;
-  margin-top: 2rem;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  @include tablet {
-    margin-top: 5rem;
-  }
-}
 
-.user-profile__image {
-  width: 11rem;
-  border-radius: 10%;
-
-}
-
-.user-profile__info-container {
-  text-align: left;
-  width: 60%;
-  margin-bottom: 2rem;
-  @include tablet {
-    grid-area: info;
-  }
-}
-
-.user-profile__info {
-  font-size: 1.2rem;
-  font-weight: 300;
-  margin-top: 2rem;
-}
-
-
-.user-profile__follows-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.follows__image {
-  width: 2rem;
-  height: auto;
-  margin-right: 1rem;
-}
 
 

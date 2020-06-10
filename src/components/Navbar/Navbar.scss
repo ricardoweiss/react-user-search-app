@@ -75,15 +75,15 @@
   font-size: 0.8rem;
   font-family: Montserrat, sans-serif;
   font-weight: bold;
-  border: 1px solid map_get($colors, blue);
+  border: 1px solid map_get($colors, grey);
   padding: 0.5rem 0.5rem;//todo
   align-self: center;
   margin: 0 0.8rem;
-  color: map_get($colors, blue);
+  color: map_get($colors, grey);
   transition: background-color 500ms;
   &:hover,
   &:active {
-    background: map_get($colors, blue);
+    background: map_get($colors, grey);
     color: map_get($colors, black);
   }
 }
