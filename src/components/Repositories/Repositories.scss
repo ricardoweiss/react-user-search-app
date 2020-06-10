@@ -6,7 +6,7 @@
 
 
 @mixin desktop {
-  @media (min-width: 40rem) {
+  @media (min-width: 62rem) {
     @content
   }
 }
@@ -17,7 +17,7 @@
   justify-content: center;
   align-items: center;
   @include tablet {
-    display: flex;
+
     grid-area: repo;
   }
 
@@ -31,15 +31,31 @@
 .repositories__header-caption {
   font-size: 0.7rem;
   margin-top: 0;
+  text-align: center;
 }
 
 .repositories__container {
-  width: 90%;
   border-radius: 5px;
   background: rgba(255, 255, 255, 0.3);
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
   margin: 2rem 0;
+  max-width: 60rem;
+  width: 80%;
   @include desktop {
+    display: flex;
+    max-height: 65rem;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    max-width: 40rem;
+
+
 
   }
 }
+
+/*
+.user-profile__repositories {
+
+}
+*/

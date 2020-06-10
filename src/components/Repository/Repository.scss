@@ -1,5 +1,10 @@
 
 
+@mixin desktop {
+  @media (min-width: 62rem) {
+    @content
+  }
+}
 
 
 .repositories__repository {
@@ -10,7 +15,9 @@
     color: black;
     text-decoration: none;
   }
-
+  @include desktop {
+    width: 50%;
+  }
 }
 
 .repository__name {

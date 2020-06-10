@@ -1,5 +1,6 @@
 @import "../../css/colors.scss";
 
+
 .home {
   display: flex;
   justify-content: space-evenly;
@@ -11,12 +12,6 @@
 
 }
 
-.home__title,
-.home__instruction {
-  text-align: center;
-  font-family: 'Montserrat', sans-serif;
-
-}
 
 .home__title-container {
   display: flex;
@@ -26,9 +21,22 @@
   width: 100%;
 }
 
+
+.home__title,
+.home__instruction {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+
+}
+
+
 .home__title {
   font-size: 1.5rem;
   font-weight: 300;
+}
+
+.home__instruction {
+  width: 90%;
 }
 
 .title--whitebold {
@@ -36,20 +44,28 @@
   color: white;
 }
 
+
 .home__line {
   width: 60%;
   border: 1px solid map_get($colors, brown);
 
 }
 
+
 .home__github-icon {
   height: 3rem;
 
 }
 
-.home__description {
+
+.home__description-container {
   width: 80%;
   border-radius: 5px;
   background: rgba(255, 255, 255, 0.3);
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  max-width: 60rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+

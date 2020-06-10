@@ -14,7 +14,7 @@
 }
 
 @mixin desktop {
-  @media (min-width: 40rem) {
+  @media (min-width: 62rem) {
     @content
   }
 }
@@ -24,10 +24,10 @@
     display: grid;
     height: 100%;
     grid-template-rows: 1fr;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1.6fr 1fr;
     grid-template-areas:
             'repo info';
-
+   /* align-items: center;*/
   }
 }
 
@@ -37,7 +37,9 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-
+  @include tablet {
+    margin-top: 5rem;
+  }
 }
 
 .user-profile__image {
