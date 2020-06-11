@@ -1,12 +1,11 @@
 import React from 'react';
 import './Home.css'
 
+const steps = require("../../images/steps-white.png");
+const mobileSteps = require("../../images/steps-mobile.png");
+const githubLogo = require('../../images/github-logo.png');
+
 const Home = () => {
-
-    const steps = require("../../images/steps-white.png");
-    const mobileSteps = require("../../images/steps-mobile.png");
-    const githubLogo = require('../../images/github-logo.png');
-
     return (
         <div className="home">
             <div className="home__title-container">
@@ -17,6 +16,7 @@ const Home = () => {
             <div className="home__description-container">
                 <p className="home__instruction">To search a user just follow these steps:</p>
             </div>
+
             {/*DESKTOP STEPS*/}
                 <div className="home__steps-container--desktop">
                     <img className="home__steps-image--desktop" src={steps} alt="steps"/>
