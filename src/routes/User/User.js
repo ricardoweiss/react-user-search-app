@@ -31,7 +31,6 @@ const User = () => {
     }, [username])
 
 
-
     if (error) {
         return <Error404 username={username} />;
     } else {

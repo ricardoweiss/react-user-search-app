@@ -17,7 +17,7 @@ const Home = () => {
             <div className="home__description-container">
                 <p className="home__instruction">To search a user just follow these steps:</p>
             </div>
-            {/*DESKTOP IMAGE*/}
+            {/*DESKTOP STEPS*/}
                 <div className="home__steps-container--desktop">
                     <img className="home__steps-image--desktop" src={steps} alt="steps"/>
                     <div className="home__steps--desktop">
@@ -36,7 +36,7 @@ const Home = () => {
                     </div>
                 </div>
 
-            {/*MOBILE IMAGE*/}
+            {/*MOBILE STEPS*/}
             <div className="home__steps-container--mobile">
                 <img className="home__steps-image--mobile" src={mobileSteps} alt="steps"/>
                 <div className="home__steps--mobile">
