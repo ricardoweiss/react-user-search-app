@@ -7,9 +7,7 @@ const NavBar = () => {
 
     const [input, setInput] = useState('')
     let history = useHistory();
-
-
-
+    const logo = require('../../images/logo.png');
 
     const handleKeyDown = (event) => {
         if (event.key === 'Enter') {
@@ -32,25 +30,16 @@ const NavBar = () => {
         <header className="navbar">
             <div className="navbar__logo-container">
                 <Link className="navbar__logo-link" to="/">
-                    <img className="navbar__logo" src={require('../../images/logo.png')} alt="logo"/>
+                    <img className="navbar__logo" src={logo} alt="logo"/>
                 </Link>
                 <Link className="navbar__title-link" to="/">
                     <h1 className="navbar__title">Github Search Users</h1>
                 </Link>
             </div>
-
             <div className="input">
-
                 <input type="text" placeholder="Username" onChange={handleInput} onKeyDown={handleKeyDown}/>
                 <button className="input__button" type="text" onClick={handleClick}>Search</button>
-
-
             </div>
-
-
-
-
-
         </header>
     )
 }
