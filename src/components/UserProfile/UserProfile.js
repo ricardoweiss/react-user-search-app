@@ -2,6 +2,8 @@ import React from "react";
 import "../../components/UserProfile/UserProfile.css"
 import Follows from "../Follows/Follows";
 
+const circuitImage = require('../../images/data-circuit-image.png');
+
 const UserProfile = (props) => {
     return (
 
@@ -15,6 +17,7 @@ const UserProfile = (props) => {
                         className="title--whitebold">Email:</span><br/> {props.info.email ? props.info.email : 'no email'}</p>
                 </div>
                 <Follows info={props.info}/>
+                <img className="user-profile__decoration" src={circuitImage} alt=""/>
             </div>
 
 
