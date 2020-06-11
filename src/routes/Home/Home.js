@@ -3,7 +3,7 @@ import './Home.css'
 
 const Home = () => {
 
-    const steps = require("../../images/steps.png");
+    const steps = require("../../images/steps-white.png");
     const mobileSteps = require("../../images/steps-mobile.png");
     const githubLogo = require('../../images/github-logo.png');
 

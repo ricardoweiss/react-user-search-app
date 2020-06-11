@@ -3,11 +3,13 @@ import { useHistory, Link } from "react-router-dom";
 
 import "./Navbar.css"
 
+const logo = require('../../images/logo.png');
+
 const NavBar = () => {
 
     const [input, setInput] = useState('')
     let history = useHistory();
-    const logo = require('../../images/logo.png');
+
 
     const handleKeyDown = (event) => {
         if (event.key === 'Enter') {
