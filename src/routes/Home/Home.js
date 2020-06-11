@@ -30,7 +30,7 @@ const Home = () => {
 
                         </div>
                         <div className="step-container--desktop">
-                            <p className="home__step">Done,the result will appear!</p>
+                            <p className="home__step">Done, the result will appear!</p>
 
                         </div>
                     </div>
@@ -42,7 +42,7 @@ const Home = () => {
                 <div className="home__steps--mobile">
                     <p>Type a GitHub username</p>
                     <p>Hit enter or click search</p>
-                    <p>Done,the result will appear!</p>
+                    <p>Done, the result will appear!</p>
                 </div>
             </div>
         </div>
