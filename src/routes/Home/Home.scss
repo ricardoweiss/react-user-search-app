@@ -106,7 +106,7 @@ $gap-top: 3rem;
 
 .home__steps-container--mobile {
   display: flex;
-  margin-top: 5rem;
+  margin: 5rem 0;
   width: 100%;
   justify-content: space-evenly;
   @include large-mobile {
