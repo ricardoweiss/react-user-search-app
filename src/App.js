@@ -5,10 +5,6 @@ import {
     Switch,
     Route
 } from "react-router-dom";
-
-
-
-
 import Home from
         "./routes/Home/Home"
 import User from
@@ -16,7 +12,6 @@ import User from
 import NavBar from "./components/Navbar/Navbar";
 
 function App() {
-
 
     return (
         <Router>

@@ -1,15 +1,11 @@
 @import "../../css/colors.scss";
-
+$gap-top: 3rem;
 
 .home {
   display: flex;
-  justify-content: space-evenly;
   align-items: center;
   flex-direction: column;
-  height: 25rem;
-
-
-
+  height: 85vh;
 }
 
 
@@ -19,6 +15,7 @@
   justify-content: center;
   align-items: center;
   width: 100%;
+  margin-top: $gap-top;
 }
 
 
@@ -35,9 +32,6 @@
   font-weight: 300;
 }
 
-.home__instruction {
-  width: 90%;
-}
 
 .title--whitebold {
   font-weight: bold;
@@ -54,7 +48,7 @@
 
 .home__github-icon {
   height: 3rem;
-
+  margin-top: $gap-top;
 }
 
 
@@ -67,5 +61,43 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: $gap-top;
 }
 
+
+.home__instruction {
+  width: 90%;
+}
+
+/*
+.home__steps-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+*/
+
+.home__steps-image--desktop {
+  width: 30rem;
+  margin-top: $gap-top;
+}
+
+.home__steps--desktop {
+  display: flex;
+  width: 100%;
+  min-width: 24rem;
+  max-width: 31rem;
+
+  align-items: center;
+  text-align: center;
+}
+
+.step-container--desktop {
+  width: 50%;
+}
+
+.home__step {
+
+}
