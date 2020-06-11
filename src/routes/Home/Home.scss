@@ -87,7 +87,7 @@ $gap-top: 3rem;
 
 .home__steps-image--desktop {
   width: 30rem;
-  margin-top: $gap-top;
+  margin-top: 5rem;
 }
 
 .home__steps--desktop {
@@ -108,7 +108,10 @@ $gap-top: 3rem;
   display: flex;
   margin-top: 5rem;
   width: 100%;
-  justify-content: center;
+  justify-content: space-evenly;
+  @include large-mobile {
+    display: none;
+  }
 }
 
 .home__steps-image--mobile {
@@ -120,9 +123,9 @@ $gap-top: 3rem;
   display: flex;
   text-align: center;
   margin-top: 3.5rem;
-
   flex-direction: column;
   justify-content: space-between;
   height: 79%;
   width: 45%;
+
 }
