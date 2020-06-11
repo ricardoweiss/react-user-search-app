@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import {useParams} from 'react-router-dom';
 import Repositories from "../../components/Repositories/Repositories";
 import "./User.css"
+import Error404 from "../../components/Error404/Error404";
 
 import UserProfile from "../../components/UserProfile/UserProfile";
 
@@ -30,12 +31,9 @@ const User = () => {
     }, [username])
 
 
-    console.log(info)
-    console.log(repo)
-
 
     if (error) {
-        return (<h1>User not Found</h1>);
+        return <Error404 username={username} />;
     } else {
         return (
             <React.Fragment>

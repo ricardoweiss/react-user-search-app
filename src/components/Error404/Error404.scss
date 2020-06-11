@@ -1,0 +1,19 @@
+
+.error__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 30rem;
+  text-align: center;
+}
+
+.error__image {
+  height: 6rem;
+}
+
+.error__title {
+  margin-top: 3rem;
+  font-size: 1.5rem;
+  width: 80%;
+}
