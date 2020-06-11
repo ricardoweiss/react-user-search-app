@@ -2,7 +2,7 @@ import React from 'react';
 import './Home.css'
 
 const steps = require("../../images/steps-white.png");
-const mobileSteps = require("../../images/steps-mobile.png");
+const mobileSteps = require("../../images/steps-mobile-white.png");
 const githubLogo = require('../../images/github-logo.png');
 
 const Home = () => {
