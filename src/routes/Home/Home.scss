@@ -1,6 +1,12 @@
 @import "../../css/colors.scss";
 $gap-top: 3rem;
 
+@mixin large-mobile {
+  @media (min-width: 40rem) {
+    @content
+  }
+}
+
 .home {
   display: flex;
   align-items: center;
@@ -69,15 +75,15 @@ $gap-top: 3rem;
   width: 90%;
 }
 
-/*
-.home__steps-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
+.home__steps-container--desktop {
+  display: none;
+  @include large-mobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
-*/
 
 .home__steps-image--desktop {
   width: 30rem;
@@ -98,6 +104,25 @@ $gap-top: 3rem;
   width: 50%;
 }
 
-.home__step {
+.home__steps-container--mobile {
+  display: flex;
+  margin-top: 5rem;
+  width: 100%;
+  justify-content: center;
+}
 
+.home__steps-image--mobile {
+  width: 100%;
+  max-width: 10rem;
+}
+
+.home__steps--mobile {
+  display: flex;
+  text-align: center;
+  margin-top: 3.5rem;
+
+  flex-direction: column;
+  justify-content: space-between;
+  height: 79%;
+  width: 45%;
 }

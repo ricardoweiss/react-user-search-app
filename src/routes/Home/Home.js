@@ -4,6 +4,7 @@ import './Home.css'
 const Home = () => {
 
     const steps = require("../../images/steps.png");
+    const mobileSteps = require("../../images/steps-mobile.png");
     const githubLogo = require('../../images/github-logo.png');
 
     return (
@@ -17,25 +18,33 @@ const Home = () => {
                 <p className="home__instruction">To search a user just follow these steps:</p>
             </div>
             {/*DESKTOP IMAGE*/}
-            <div className="home__steps-container--desktop">
-                <img className="home__steps-image--desktop" src={steps} alt="steps"/>
-                <div className="home__steps--desktop">
-                    <div className="step-container--desktop">
-                        <p className="home__step">Type a GitHub username</p>
+                <div className="home__steps-container--desktop">
+                    <img className="home__steps-image--desktop" src={steps} alt="steps"/>
+                    <div className="home__steps--desktop">
+                        <div className="step-container--desktop">
+                            <p className="home__step">Type a GitHub username</p>
 
-                    </div>
-                    <div className="step-container--desktop">
-                        <p className="home__step">Hit enter or click search</p>
+                        </div>
+                        <div className="step-container--desktop">
+                            <p className="home__step">Hit enter or click search</p>
 
-                    </div>
-                    <div className="step-container--desktop">
-                        <p className="home__step">Done,the result will appear!</p>
+                        </div>
+                        <div className="step-container--desktop">
+                            <p className="home__step">Done,the result will appear!</p>
 
+                        </div>
                     </div>
                 </div>
-            </div>
-            {/*MOBILE IMAGE*/}
 
+            {/*MOBILE IMAGE*/}
+            <div className="home__steps-container--mobile">
+                <img className="home__steps-image--mobile" src={mobileSteps} alt="steps"/>
+                <div className="home__steps--mobile">
+                    <p>Type a GitHub username</p>
+                    <p>Hit enter or click search</p>
+                    <p>Done,the result will appear!</p>
+                </div>
+            </div>
         </div>
     )
 }
