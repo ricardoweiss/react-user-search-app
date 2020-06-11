@@ -1,5 +1,6 @@
 import React from "react";
 import "../../components/UserProfile/UserProfile.css"
+import Follows from "../Follows/Follows";
 
 const UserProfile = (props) => {
     return (
@@ -13,14 +14,7 @@ const UserProfile = (props) => {
                     <p className="user-profile__info"><span
                         className="title--whitebold">Email:</span><br/> {props.info.email ? props.info.email : 'no email'}</p>
                 </div>
-                <div className="user-profile__follows-container">
-                    <img className="follows__image" src={require('../../images/follow.png')} alt=""/>
-                    <p className="user-profile__followers">{props.info.followers} Followers</p>
-                </div>
-                <div className="user-profile__follows-container">
-                    <img className="follows__image" src={require('../../images/followers.png')} alt=""/>
-                    <p className="user-profile__followers">{props.info.following} Following</p>
-                </div>
+                <Follows info={props.info}/>
             </div>
 
 

@@ -20,7 +20,7 @@ const User = () => {
                 data.message ? setError(data.message) : setInfo(data);
 
             })
-        fetch(`https://api.github.com/users/${username}/repos`)
+        fetch(`https://api.github.com/users/${username}/repos?page=1&per_page=10000`)
             .then(res => res.json())
             .then(data => {
                 setError(null);

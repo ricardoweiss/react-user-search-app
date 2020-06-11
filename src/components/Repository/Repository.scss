@@ -11,13 +11,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
   a {
     color: map_get($colors, black);
     text-decoration: none;
     width: 65%;
   }
   @include desktop {
-    width: 50%;
+    width: 30rem;
   }
 }
 

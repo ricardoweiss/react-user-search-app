@@ -9,6 +9,14 @@ const NavBar = () => {
     let history = useHistory();
 
 
+
+
+    const handleKeyDown = (event) => {
+        if (event.key === 'Enter') {
+            handleClick();
+        }
+    }
+
     const handleInput = (e) => {
         setInput(e.target.value);
     }
@@ -33,8 +41,8 @@ const NavBar = () => {
 
             <div className="input">
 
-                <input type="text" placeholder="Username" onChange={handleInput}/>
-                <button className="input__button" onClick={handleClick}>Search</button>
+                <input type="text" placeholder="Username" onChange={handleInput} onKeyDown={handleKeyDown}/>
+                <button className="input__button" type="text" onClick={handleClick}>Search</button>
 
 
             </div>
