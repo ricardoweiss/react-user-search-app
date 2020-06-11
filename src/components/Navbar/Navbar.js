@@ -22,10 +22,7 @@ const NavBar = () => {
     }
 
     const handleClick = () => {
-
         history.push(`/user/${input}`)
-
-
     }
 
     return (
