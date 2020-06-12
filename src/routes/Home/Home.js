@@ -14,7 +14,7 @@ const Home = () => {
             </div>
             <img className="home__github-icon" src={githubLogo} alt=""/>
             <div className="home__description-container">
-                <p className="home__instruction">To search a user just follow these steps:</p>
+                <p className="home__instruction">To search an user just follow these steps:</p>
             </div>
 
             {/*DESKTOP STEPS*/}
