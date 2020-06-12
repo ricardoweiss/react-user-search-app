@@ -10,8 +10,7 @@ informações desse usuário e uma lista com até 100 repositórios, em ordem de
 ## Como iniciar o app
 
 ### Dependências
- * React
- * Sass
+
  * Nodejs
  
 ### Instalando
