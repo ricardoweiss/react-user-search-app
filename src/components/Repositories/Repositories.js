@@ -22,7 +22,6 @@ const Repositories = ({ repo }) => {
                             return (<Repository repositorio={repositorio} key={key}/>)
                         })
                     }
-
                 </div>
             </div>
         );
