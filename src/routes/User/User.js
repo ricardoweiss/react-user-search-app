@@ -31,12 +31,12 @@ const User = () => {
     }, [username])
 
 
-    return error ? <Error404 username={username} />: (<React.Fragment>
+    return error ? <Error404 username={username} />: (
                                                           <section className="user-profile">
                                                               <UserProfile info={info} />
                                                               <Repositories repo={repo}/>
                                                           </section>
-                                                      </React.Fragment>)
+                                                      )
 }
 
 export default User;
