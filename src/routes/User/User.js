@@ -38,14 +38,7 @@ const User = () => {
             <React.Fragment>
                 <section className="user-profile">
                     <UserProfile info={info} />
-                    <div className="repositories">
-                        <h1 className="repositories__header">User repositories:</h1>
-                        <p className="repositories__header-caption">( Click in the repository name to open it on a new
-                            window!)</p>
-                        <div className="repositories__container">
-                            <Repositories repo={repo}/>
-                        </div>
-                    </div>
+                    <Repositories repo={repo}/>
                 </section>
             </React.Fragment>
         );

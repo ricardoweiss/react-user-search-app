@@ -22,9 +22,19 @@
 
 }
 
+.repositories__empty-image {
+  height: 15rem;
+  margin-top: 5rem;
+}
+
 .repositories__header {
   margin-top: 4rem;
-  margin-bottom: 1rem;
+  margin-bottom: 5rem;
+  text-align: center;
+  @include tablet {
+    margin-bottom: 1rem;
+    margin-top: 5rem;
+  }
 }
 
 .repositories__header-caption {
