@@ -35,10 +35,10 @@ const NavBar = () => {
                     <h1 className="navbar__title">Github Search Users</h1>
                 </Link>
             </div>
-            <div className="input">
-                <input type="text" placeholder="Username" onChange={handleInput} onKeyDown={handleKeyDown}/>
+            <form className="input">
+                <input type="text" placeholder="Username" value={input} onChange={handleInput} onKeyDown={handleKeyDown}/>
                 <button className="input__button" type="text" onClick={handleClick}>Search</button>
-            </div>
+            </form>
         </header>
     )
 }

@@ -10,15 +10,18 @@ const User = () => {
 
     let {username} = useParams();
     const [info, setInfo] = useState({});
-    const [repo, setRepo] = useState([])
-    const [error, setError] = useState(null)
+    const [repo, setRepo] = useState([]);
+    const [error, setError] = useState(null);
+    const [loading, setLoading] = useState(false);
 
     useEffect(() => {
+        setLoading(true);
         fetch(`https://api.github.com/users/${username}`)
             .then(res => res.json())
             .then(data => {
                 setError(null);
                 data.message ? setError(data.message) : setInfo(data);
+
 
             })
         fetch(`https://api.github.com/users/${username}/repos?page=1&per_page=100`)
@@ -26,17 +29,21 @@ const User = () => {
             .then(data => {
                 setError(null);
                 data.message ? setError(data.message) : setRepo(data);
+                setLoading(false);
 
             })
     }, [username])
 
 
-    return error ? <Error404 username={username} /> : (
-      <section className="user-profile">
-          <UserProfile info={info} />
-          <Repositories repo={repo}/>
-      </section>
-    )
+    return error ? <Error404 username={username} /> :
+           loading ? <h1>loading</h1> : (<section className="user-profile">
+                                            <UserProfile info={info} />
+                                            <Repositories repo={repo}/>
+                                         </section>)
+
+
+
+
 }
 
 export default User;
