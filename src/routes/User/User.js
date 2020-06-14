@@ -35,16 +35,19 @@ const User = () => {
 
     }, [username])
 
-
-    return error ? <Error404 username={username} /> :
-        loading ? <Loading/> : (<section className="user-profile">
-                                    <UserProfile info={info} />
-                                    <Repositories repo={repo}/>
-                                </section>
-                                )
-
-
-
+    if (error) {
+        return <Error404 username={username}/>;
+    } else {
+        if (loading){
+            return <Loading/>;
+        } else {
+            return (<section className="user-profile">
+                        <UserProfile info={info} />
+                        <Repositories repo={repo}/>
+                    </section>
+                    )
+        }
+    }
 }
 
 export default User;
