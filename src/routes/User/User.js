@@ -5,6 +5,7 @@ import "./User.css"
 import Error404 from "../../components/Error404/Error404";
 
 import UserProfile from "../../components/UserProfile/UserProfile";
+import Loading from "../../components/Loading/Loading";
 
 const User = () => {
 
@@ -36,11 +37,10 @@ const User = () => {
 
 
     return error ? <Error404 username={username} /> :
-           loading ? <h1>loading</h1> : (<section className="user-profile">
+           loading ? <Loading/> : (<section className="user-profile">
                                             <UserProfile info={info} />
                                             <Repositories repo={repo}/>
                                          </section>)
-
 
 
 

@@ -1,0 +1,96 @@
+@mixin large-mobile {
+  @media (min-width: 40rem) {
+    @content
+  }
+}
+
+
+.loading__container {
+  display: flex;
+  height: 80vh;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading__block {
+  width: 1.5rem;
+  height: 2rem;
+  background: white;
+  margin-left: 0.5rem;
+  @include large-mobile {
+    width: 3rem;
+    height: 4rem;
+  }
+}
+
+.loading__block--one {
+  @extend .loading__block;
+  animation: loading-mobile 1s linear 0s infinite;
+  @include large-mobile {
+    animation: loading-desktop 1s linear 0s infinite;
+  }
+}
+
+.loading__block--two {
+  @extend .loading__block;
+  animation: loading-mobile 2s linear 0s infinite;
+  @include large-mobile {
+    animation: loading-desktop 2s linear 0s infinite;
+  }
+}
+
+.loading__block--three {
+  @extend .loading__block;
+  animation: loading-mobile 1s linear 0s infinite;
+  @include large-mobile {
+    animation: loading-desktop 1s linear 0s infinite;
+  }
+}
+
+.loading__block--four {
+  @extend .loading__block;
+  animation: loading-mobile 2s linear 0s infinite;
+  @include large-mobile {
+    animation: loading-desktop 2s linear 0s infinite;
+  }
+}
+
+.loading__block--five {
+  @extend .loading__block;
+  animation: loading-mobile 1s linear 0s infinite;
+  @include large-mobile {
+    animation: loading-desktop 1s linear 0s infinite;
+  }
+}
+
+
+@keyframes loading-mobile {
+  0% {
+    height: 2rem;
+  }
+
+  50% {
+    height: 3.5rem;
+
+  }
+
+  100% {
+    height: 2rem;
+  }
+}
+
+@keyframes loading-desktop {
+  0% {
+    height: 4rem;
+  }
+
+  50% {
+    height: 7rem;
+
+  }
+
+  100% {
+    height: 4rem;
+  }
+}
