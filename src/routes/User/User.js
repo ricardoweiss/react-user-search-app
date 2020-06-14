@@ -37,10 +37,11 @@ const User = () => {
 
 
     return error ? <Error404 username={username} /> :
-           loading ? <Loading/> : (<section className="user-profile">
-                                            <UserProfile info={info} />
-                                            <Repositories repo={repo}/>
-                                         </section>)
+        loading ? <Loading/> : (<section className="user-profile">
+                                    <UserProfile info={info} />
+                                    <Repositories repo={repo}/>
+                                </section>
+                                )
 
 
 
