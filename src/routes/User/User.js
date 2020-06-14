@@ -16,22 +16,22 @@ const User = () => {
 
     useEffect(() => {
         setLoading(true);
+        setError(null);
         fetch(`https://api.github.com/users/${username}`)
             .then(res => res.json())
             .then(data => {
-                setError(null);
-                data.message ? setError(data.message) : setInfo(data);
+                setInfo(data);
+                fetch(`https://api.github.com/users/${username}/repos?page=1&per_page=100`)
+                    .then(res => res.json())
+                    .then(data => {
+                        data.message ? setError(data.message) : setRepo(data);
+                        setLoading(false);
 
-
+                    })
+                    .catch(error => setError(error))
             })
-        fetch(`https://api.github.com/users/${username}/repos?page=1&per_page=100`)
-            .then(res => res.json())
-            .then(data => {
-                setError(null);
-                data.message ? setError(data.message) : setRepo(data);
-                setLoading(false);
+            .catch(error => setError(error))
 
-            })
     }, [username])
 
 
